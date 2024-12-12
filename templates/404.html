@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav>
+      <div class="logo">
+        <p>MUGISHA DRAKE</p>
+      </div>
+      </div>
+    </nav>
+
+    {% comment %} body {% endcomment %}
+    <div class="container">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-message">Oops! Page Not Found</h2>
+      <p class="error-description">
+        The page you are looking for might have been removed, had its name
+        changed, or is temporarily unavailable.
+      </p>
+      <a href="/" class="home-button">Go to Homepage</a>
+      <div class="social-links">
+        <a href="https://twitter.com/Drakemugisha5" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.tiktok.com/@local.man84" target="_blank"
+          ><i class="fab fa-tiktok"></i
+        ></a>
+        <a href="https://github.com/Drakemugisha" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/mugisha-drake-31223232a"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

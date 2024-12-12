@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUGISHA DRAKE  ||  full stack developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <!-- nav bar -->
+     <nav>
+        <div class="logo">
+           <p> MUGISHA DRAKE</p>
+        </div>
+        <ul class="nav-list">
+            <a href="#contact"><li class="list-item">CONTACT</li></a>
+            <a href="#socials"><li class="list-item">SOCIALS</li></a>
+            <a href="#projects"><li class="list-item">PROJECTS</li></a>
+            <li class="list-item"><input type="checkbox" class="something"></li>
+        </ul>
+        
+        <button id="menu-toggle">☰</button>
+        <div id="slide-menu" class="slide-menu">
+            <ul class="menu-list">
+              <li class="list-item" id="menu-home-btn">HOME</li>
+              <li class="list-item" id="menu-about-btn">ABOUT</li>
+              <a href="#contact"><li class="list-item">CONTACT</li></a>
+              <a href="#socials"><li class="list-item">SOCIALS</li></a>
+              <a href="#projects"><li class="list-item">PROJECTS</li></a>
+              <a href="#skills"><li class="list-item">SKILLS</li></a>
+              <li class="list-item"><input type="checkbox" class="something"></li>
+            </ul>
+        </div>
+     </nav>
+     <!-- hero -->
+
+      <section class="hero">
+        <div class="checkbox">
+            <input type="checkbox" class="something">
+        </div>
+        <div>
+            <div class="content" id="home">
+                <div class="headings">
+                    <h5>My name is mugisha drake</h5>
+                    <h2 class="highlight">full stack developer</h2>
+                </div>
+
+                <div class="column-content">
+                    <p class="first-column"><span>frontend development</span> for responsive and moderm web designs with <span>HTML</span>, <span>CSS</span>, <span>JAVASCRIPT</span> and libraries (<span>bootstrap</span>, <span>tailwind</span>, <span>react</span>), version control wIth <span>GIT</span> and open to collaborations.</p>
+                    <p class="second-column"><span>backend development</span> with <span>python</span>, <span>PHP</span> and frameworks (<span>django</span>, <span>lavarel</span>), database(<span>postgressql</span>, <span>mySQL</span>).</p>
+                </div>
+
+            </div>
+            <div id="about">
+                <h2>about me</h2>
+                <p>
+                  Self-taught and highly motivated Full Stack Developer with hands-on experience in front-end and back
+                  end technologies. Proficient in building dynamic, responsive websites using HTML, CSS, JavaScript, 
+                  React, Python, SQL, PHP, Django, and Bootstrap. Passionate about continuous learning, problem-solving, 
+                  and optimizing user experiences. 
+                </p>
+            </div>
+        </div>
+      </section>
+
+      <!-- socials -->
+
+      <div class="socials" id="socials">
+        <a href="https://twitter.com/Drakemugisha5" target="_blank"><i class="fab fa-twitter" style="font-size: 50px;"></i></a>
+        <a href="https://www.tiktok.com/@local.man84" target="_blank"><i class="fab fa-tiktok" style="font-size: 50px;"></i></a>
+        <a href="https://github.com/Drakemugisha" target="_blank"><i class="fab fa-github" style="font-size: 50px;"></i></a>
+        <a href="https://www.linkedin.com/in/mugisha-drake-31223232a" target="_blank"><i class="fab fa-linkedin" style="font-size: 50px;"></i></a>
+      </div>
+
+      <!-- skills -->
+      <fieldset id="skills">
+        <legend class="skills"> <h2>my skills</h2></legend>
+    
+        <div class="skill-container">
+          <div class="html">
+            <div class="line" style="--d:90%">
+              <p>html</p>
+            </div>
+            <p>90%</p>
+          </div>
+      
+          <div class="css">
+            <div class="line" style="--d:85%">
+              <p>css</p>
+            </div>
+            <p>85%</p>
+          </div>
+          <div class="bootstrap">
+            <div class="line" style="--d:80%">
+              <p>bootstrap</p>
+            </div>
+            <p>80%</p>
+          </div>
+          <div class="javascript">
+            <div class="line" style="--d:70%">
+              <p>javascript</p>
+            </div>
+            <p>70%</p>
+          </div>
+          <div class="react">
+            <div class="line" style="--d:60%">
+              <p>react</p>
+            </div>
+            <p>60%</p>
+          </div>
+          <div class="python">
+            <div class="line" style="--d:50%">
+              <p>python</p>
+            </div>
+            <p>50%</p>
+          </div>
+          <div class="git">
+            <div class="line" style="--d:75%">
+              <p>git & github</p>
+            </div>
+            <p>75%</p>
+          </div>
+          <div class="mySQL">
+            <div class="line" style="--d:70%">
+              <p>mySQL</p>
+            </div>
+            <p>70%</p>
+          </div>
+    
+          <div class="php">
+            <div class="line" style="--d:60%">
+              <p>PHP</p>
+            </div>
+            <p>60%</p>
+          </div>
+    
+          <div class="Django">
+            <div class="line" style="--d:60%">
+              <p>Django</p>
+            </div>
+            <p>60%</p>
+          </div>
+        </div>
+    
+      </fieldset>
+
+      <!-- projects -->
+
+      <div class="projects" id="projects">
+
+        <h2>previous projects</h2>
+        <div class="project">
+          <input type="checkbox" class="title">
+          <div class="project-content">
+            <img src="{% static 'images/download (1).png'%}" alt="food">
+            <h3>login page</h3>
+            <p>login website, with ultimate design</p>
+            <a href="projects/food/login.html"> <button class="cardbtn">check it out</button></a>
+          </div>
+        </div>
+
+        <div class="project-container">
+          <div class="project left">
+            <input type="checkbox" class="title">
+            <div class="project-content">
+              <img src="{% static 'images/logo.webp' %}" alt="food">
+              <h3>photography website</h3>
+              <p>a photography website implimented with HTML, CSS and javascript</p>
+              <a href="https://drakemugisha.github.io/photography/"> <button class="cardbtn">check it out</button></a>
+            </div>
+          </div>
+  
+          <div class="project right">
+            <input type="checkbox" class="title">
+            <div class="project-content">
+              <img src="{% static 'images/todo.jpg'%}" alt="to do list">
+              <h3>to-do list app</h3>
+              <p>allows you to add and remove tasks. done by react</p>
+              <a href="projects/index.html"> <button class="cardbtn">check it out</button></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- contact us -->
+      <div class="contact" id="contact">
+        <h2>contact me</h2>
+        <form action="" method="POST" id='form'>
+            {% csrf_token %}
+            {% for feild in form %}
+          <label for="name">{{feild.label}}</label>
+          {{feild}}
+          <br>
+            {% endfor %}
+          <button type="submit" id='formbtn'>send</button>
+        </form>
+      </div>
+
+      
+  <footer>
+
+    <ul>
+      <a href="#contact"><li class="list-item">CONTACT</li></a>
+      <a href="#socials"><li class="list-item">SOCIALS</li></a>
+      <a href="#projects"><li class="list-item">PROJECTS</li></a>
+      <a href="#skills"><li class="list-item">SKILLS</li></a>
+    </ul>
+
+    <div class="socialMedia">
+      <a href="https://twitter.com/Drakemugisha5" target="_blank"><i class="fab fa-twitter" style="font-size: 35px;"></i></a>
+      <a href="https://www.tiktok.com/@local.man84" target="_blank"><i class="fab fa-tiktok" style="font-size: 35px;"></i></a>
+      <a href="https://github.com/Drakemugisha" target="_blank"><i class="fab fa-github" style="font-size: 35px;"></i></a>
+      <a href="https://www.linkedin.com/in/mugisha-drake-31223232a" target="_blank"><i class="fab fa-linkedin" style="font-size: 35px;"></i></a>
+    </div>
+    <p>&copy; 2024 mugisha drake. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
