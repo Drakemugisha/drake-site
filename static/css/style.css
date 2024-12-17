@@ -219,6 +219,19 @@ span{
 .lightmode span{
     color: var(--highlighcolor);
 }
+.hero .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero .buttons button{
+    background-color: transparent;
+    border: 2px solid rgb(25, 194, 177);
+    padding: 10px 15px;
+}
+.hero .buttons button:hover{
+    background-color: var(--maincolor);
+}
 
 /* socials */
 
