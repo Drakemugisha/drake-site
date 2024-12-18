@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Check if scrolling down
-    if (scrollTop > lastScrollTop) {
+    if (scrollTop > 100) {
         // Scrolling down
         about.style.display = "block";
         home.style.display = "none";
@@ -26,7 +26,6 @@ window.addEventListener("scroll", () => {
         checkbox.checked = false;
     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });
 
 const showHome = ()=>{
@@ -107,14 +106,6 @@ function onScroll(){
 window.addEventListener('scroll', onScroll);
 
 
-// dark mode
-// darktoggle.forEach((button) => {
-//     button.addEventListener('click', () => {
-//         body.classList.toggle('lightmode');
-//     });
-// });
-
-
 // Check for user's color scheme preference
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     body.classList.remove('lightmode'); // Apply dark mode if preferred
@@ -150,3 +141,10 @@ if (storedTheme) {
         body.classList.add('lightmode');
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", ()=> {
+    const loader = document.querySelector(".loader-container");
+
+    loader.style.display = 'none'
+});

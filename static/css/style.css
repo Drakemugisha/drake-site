@@ -8,8 +8,35 @@
 *{
     font-size: 16px;
 }
+/* loaders */
+.loader-container{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000000;
+    background-color: var(--maincolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    height: 45px;
+    aspect-ratio: 1.2;
+    --c:no-repeat repeating-linear-gradient(90deg,#000 0 20%,#0000 0 40%);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%;
+    background-size: calc(500%/6) 50%;
+    animation: l10 1s infinite linear;
+}
+  @keyframes l10 {
+    33%  {background-position: 0   0   ,100% 100%}
+    66%  {background-position: 0   100%,100% 0   }
+    100% {background-position: 50% 100%,50%  0   }
+}
+
 body{
-    background-color: rgb(14, 14, 17);
+    background-color: rgb(55, 55, 58);
     color: #fff;
     padding: 0;
     margin: 0;
@@ -151,6 +178,9 @@ nav .nav-list{
     transform: rotate(-45deg);
     transition: 1.5s;
 }
+.hero input{
+    max-width: 60%;
+}
 .hero .something::after{
     content: "HOME";
     position: absolute;
@@ -161,7 +191,7 @@ nav .nav-list{
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 15rem;
     width: 15rem;
-    background-color: rgb(194, 240, 194);
+    background-color: var(--maincolor);
     top: 50%;
     left: 25px;
     border-radius: 50%;
@@ -174,7 +204,7 @@ nav .nav-list{
 }
 
 .hero .something:checked:after{
-    left: 50%;
+    left: 60%;
     content: "ABOUT";
     box-shadow: 15px 15px 15px #000;
 }
@@ -198,7 +228,7 @@ h2{
 .hero .content h5{
     font-size: 1.5rem;
     margin-bottom: 0;
-    color: aquamarine;
+    color: var(--maincolor);
 }
 .lightmode  .hero .content h5{
     color: var(--highlighcolor);
@@ -214,7 +244,7 @@ h2{
     display: none;
 }
 span{
-    color: aquamarine;
+    color: var(--maincolor);
 }
 .lightmode span{
     color: var(--highlighcolor);
@@ -226,8 +256,12 @@ span{
 }
 .hero .buttons button{
     background-color: transparent;
-    border: 2px solid rgb(25, 194, 177);
+    border: 2px solid var(--maincolor);
     padding: 10px 15px;
+    color: var(--secondarycolor);
+}
+.lightmode .hero .buttons button{
+    border: 2px solid var(--secondarycolor);
 }
 .hero .buttons button:hover{
     background-color: var(--maincolor);
@@ -246,7 +280,7 @@ span{
     border-radius: 40px;
 }
 .socials a i{
-   color: aquamarine;
+   color: var(--maincolor);
    transition: .5s;
    padding: 5px;
 }
@@ -256,7 +290,7 @@ span{
 .socials a i:hover{
     color: rgba(255, 255, 255, 0.5);
     transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(10PX, 10PX);
-    box-shadow: -20px 20px 10px  aquamarine;
+    box-shadow: -20px 20px 10px  var(--maincolor);
 }
 .lightmode .socials a i:hover{
     box-shadow: -20px 20px 10px  var(--secondarycolor);
@@ -347,7 +381,7 @@ span{
     position: absolute;
     height: 35px;
     width: 35px;
-    background-color: rgb(194, 240, 194);
+    background-color: var(--maincolor);
     top: 50%;
     left: 5px;
     border-radius: 50%;
@@ -415,15 +449,17 @@ form{
     border-radius: 16px;
     font-size: 2rem;
     min-width: 70%;
+    max-width: 70%;
 }
-input, textarea{
+form input, form textarea{
     border-radius: 16px;
     padding: 10px 20px;
+    max-width: 60%;
 }
 form button{
     padding: 5px 10px;
     border-radius: 16px;
-    background-color: aquamarine;
+    background-color: var(--maincolor);
     font-size: 1.2rem;
 }
 .lightmode form button{

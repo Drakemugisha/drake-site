@@ -10,6 +10,10 @@
     <script src="{% static 'js/script.js' %}" defer></script>
 </head>
 <body>
+      <div class="loader-container">
+
+        <div class="loader"></div>
+      </div>
     <!-- nav bar -->
      <nav>
         <div class="logo">
@@ -52,6 +56,10 @@
                     <p class="first-column"><span>frontend development</span> for responsive and moderm web designs with <span>HTML</span>, <span>CSS</span>, <span>JAVASCRIPT</span> and libraries (<span>bootstrap</span>, <span>tailwind</span>, <span>react</span>), version control wIth <span>GIT</span> and open to collaborations.</p>
                     <p class="second-column"><span>backend development</span> with <span>python</span>, <span>PHP</span> and frameworks (<span>django</span>, <span>lavarel</span>), database(<span>postgressql</span>, <span>mySQL</span>).</p>
                 </div>
+                <div class="buttons">
+                  <a href="#contact"> <button>contact me <i class="fa-solid fa-check"></i></button></a>
+                  <a href="#"> <button>contact me <i class="fa-solid fa-download"></i></button></a>
+                </div>
 
             </div>
             <div id="about">
@@ -63,7 +71,7 @@
                   and optimizing user experiences. 
                 </p>
                 <div class="buttons">
-                  <a href="contact"> <button>contact me <i class="fa-solid fa-check"></i></button></a>
+                  <a href="#contact"> <button>contact me <i class="fa-solid fa-check"></i></button></a>
                   <a href="#"> <button>contact me <i class="fa-solid fa-download"></i></button></a>
                 </div>
             </div>
@@ -201,6 +209,13 @@
           <br>
             {% endfor %}
           <button type="submit" id='formbtn'>send</button>
+          {% if messages %}
+          <div>
+          {% for message in messages %}
+              <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+          {% endfor %}
+          </div>
+          {% endif %}
         </form>
       </div>
 
