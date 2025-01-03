@@ -518,9 +518,6 @@ footer ul li:hover{
         width: 9rem;
         font-size: 2rem;
     }
-    .hero:has(.something:checked){
-        flex-direction: column;
-    }
 
     .hero .something:checked{
         transform: rotate(0deg);
