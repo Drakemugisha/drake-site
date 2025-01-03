@@ -141,5 +141,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://13.51.199.228:8080',
+    'https://mugishadrake.site'
 ]

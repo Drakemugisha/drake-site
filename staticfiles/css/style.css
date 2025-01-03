@@ -501,7 +501,6 @@ footer ul li:hover{
 }
 @media (max-width: 840px){
     .hero{
-        flex-direction: column-reverse;
         height: 60vh;
     }
 
