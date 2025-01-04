@@ -13,17 +13,10 @@ let lastScrollTop = 0;
 window.addEventListener("scroll", () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Check if scrolling down
     if (scrollTop > 100) {
-        // Scrolling down
-        about.style.display = "block";
-        home.style.display = "none";
-        checkbox.checked = true;
+        showAbout();
     } else {
-        // Scrolling up
-        about.style.display = "none";
-        home.style.display = "block";
-        checkbox.checked = false;
+        showHome();
     }
 
 });
@@ -50,7 +43,6 @@ const button = document.querySelector(".title");
 const projectContent = document.querySelector(".project-content");
 
 button.addEventListener("click", ()=>{
-    
     projectContent.classList.toggle("show");
 })
 const button1 = document.querySelector(".left .title");
@@ -77,7 +69,6 @@ menuToggle.addEventListener('click', (event) => {
 });
 
 window.addEventListener('click', (event) => {
-    // Check if the menu is active and the click was not on the menu or the toggle button
     if (menu.classList.contains('active')) {
         menu.classList.remove('active');
     }
@@ -90,7 +81,7 @@ function isElementInViewPort(el){
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight) &&
-        rect.left <= (window.innerWidth) //check if element is within view port
+        rect.left <= (window.innerWidth) 
     );
 }
 

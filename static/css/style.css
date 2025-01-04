@@ -92,7 +92,7 @@ nav .nav-list{
     position: absolute;
     height: 30px;
     width: 35px;
-    background-color: rgb(194, 240, 194);
+    background-color: var(--maincolor);
     top: 50%;
     left: 5px;
     border-radius: 50%;
@@ -326,21 +326,14 @@ span{
     justify-content: center;
     border: 3px solid transparent;
     height: 20px;
-    width: var(--d);
+    width: 0;
     border-radius: 8px;
     background-color: rgb(255, 255, 255, 0.4); 
+    transition: 2s ease;
 }
 
 .line.animate{
-    animation: fillBar 2s ease;
-}
-@keyframes fillBar {
-    0%{
-        width: 0%;
-    }
-    70%{
-        width: var(--d);}
-
+    width: var(--d);
 }
 
 /* projects */
@@ -485,6 +478,11 @@ footer ul li:hover{
     margin-left: 10px;
 }
 /* responsiveness */
+@media (min-width: 1024px) {
+    .hero p{
+        font-size: 1.3rem;
+    }
+}
 @media (max-width: 992px){
     .hero .something{
         height: 17rem;
