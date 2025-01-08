@@ -8,6 +8,9 @@
 *{
     font-size: 16px;
 }
+html{
+    scroll-behavior: smooth;
+}
 /* loaders */
 .loader-container{
     position: fixed;
