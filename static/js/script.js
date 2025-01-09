@@ -13,7 +13,7 @@ let lastScrollTop = 0;
 window.addEventListener("scroll", () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > 100) {
+    if (scrollTop > 200) {
         showAbout();
     } else {
         showHome();
@@ -139,3 +139,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     loader.style.display = 'none'
 });
+
+
+document.addEventListener("scroll", () => {
+    const landingSection = document.getElementById("landing-section");
+    if (window.scrollY > 100) {
+      landingSection.classList.add("hidden");
+    }
+  });
