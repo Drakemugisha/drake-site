@@ -6,7 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 class Messages(models.Model):
     full_name = models.CharField(max_length=70)
     email = models.EmailField(max_length=70)
-    # tel_number = models.PhoneNumberField()
+    tel_number = PhoneNumberField(blank=True, null=True)
     your_message = models.TextField()
     date  = models.DateTimeField(auto_now_add=True)
 
