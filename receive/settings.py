@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': os.getenv("DATABASE_NAME"),
         'USER': os.getenv("DATABASE_USER"),
         'PASSWORD': os.getenv("DATABASE_PASSWORD"),
-        'HOST': 'database-1.c56miag42f10.eu-north-1.rds.amazonaws.com',
+        'HOST': os.getenv('DATABASE_HOST'),
         'PORT': '5432',
     }
 }
@@ -95,7 +95,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'drakemugisha6@gmail.com'
-EMAIL_HOST_PASSWORD = 'tmzhnclvshyruxns'
+EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
