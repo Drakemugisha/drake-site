@@ -13,14 +13,13 @@ def index(request):
             name = form.cleaned_data['full_name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['your_message']
-            phone=form.cleaned_data['tel_number']
 
             # Save the form data
             form.save()
 
             # Send email to recipient
             send_mail(
-                subject=f"New Message from {name} {phone}",
+                subject=f"New Message from {name}",
                 message=message,
                 from_email=email,
                 recipient_list=['drakemugisha6@gmail.com'],
