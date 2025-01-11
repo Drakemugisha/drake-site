@@ -565,7 +565,7 @@ footer ul li:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #4f4cec, #2b2c7d);
+    background: conic-gradient(from 0deg, #000 25%, hsl(0, 0%, 30%) 50%);
     color: white;
     text-align: center;
     z-index: 9999;
