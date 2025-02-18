@@ -8,7 +8,9 @@ def index(request):
 
     if request.method == 'POST':
         form = MessageForm(request.POST)
-        if form.is_valid():
+        if request.POST.get('honeypot'):
+            return redirect('bot_detected')
+        elif form.is_valid():
             # Get the cleaned data
             name = form.cleaned_data['full_name']
             email = form.cleaned_data['email']
